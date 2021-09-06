@@ -1,7 +1,7 @@
 import { React } from "react";
 import { Navbar, Nav, NavDropdown } from "react-bootstrap";
 import "../styles/NavegationBar.css";
-import { Link, NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 const NavegationBar = () => {
   return (
     <Navbar bg="dark" expand="lg" className="d-flex ">
