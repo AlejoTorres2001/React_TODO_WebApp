@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
-import { TaskRow } from "./components/TaskRow";
-import { TaskBanner } from "./components/TaskBanner";
-import { TaskCreator } from "./components/TaskCreator";
-import { VisibilityControl } from "./components/VisibilityControl";
-
+import { TaskRow } from "./components/pages/Tasks/TaskRow";
+import { TaskBanner } from "./components/pages/Tasks/TaskBanner";
+import { TaskCreator } from "./components/pages/Tasks/TaskCreator";
+import { VisibilityControl } from "./components/pages/Tasks/VisibilityControl";
+import NavegationBar from "./components/NavegationBar";
 function App() {
 
 
@@ -103,6 +103,7 @@ function App() {
 
   return (
     <div>
+      <NavegationBar/>
       <TaskBanner tasks={taskItems} userName={userName}></TaskBanner>
       <TaskCreator callback={createNewTask}></TaskCreator>
       <table className="table table-striped table-bordered">
