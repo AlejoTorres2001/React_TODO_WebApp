@@ -3,7 +3,7 @@ import { TaskRow } from "./TaskRow";
 import { TaskBanner } from "./TaskBanner";
 import { TaskCreator } from "./TaskCreator";
 import { VisibilityControl } from "./VisibilityControl";
-
+import '../../../styles/index.css'
 export default function TaskPage() {
     //USE STATES
   const [userName, setuserName] = useState("Alejo");
@@ -100,7 +100,7 @@ export default function TaskPage() {
       ));
 
   return (
-    <div>
+    <div className="taskpage">
       <TaskBanner tasks={taskItems} userName={userName}></TaskBanner>
       <TaskCreator callback={createNewTask}></TaskCreator>
       <table className="table table-striped table-bordered">

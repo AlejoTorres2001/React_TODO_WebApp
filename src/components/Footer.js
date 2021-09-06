@@ -6,10 +6,8 @@ import '../styles/footer.css'
 export default function Footer() {
     return (
         <div className="footer">
-            <div className="title-container">
+             <h2 className="text-primary text-white text-center p-2">Follow me on My Social Medias</h2>
 
-             <h2 className="title">Follow me on My Social Medias</h2>
-            </div>
         <div className="social-icons">
      <a href="" className="social-icon facebook">
          <span className="icon__inner">
