@@ -3,7 +3,7 @@ import React from "react";
 import { BrowserRouter as Router, Route, Switch,Redirect } from "react-router-dom";
 import NavegationBar from "../components/NavegationBar";
 import  TaskPage  from "../components/pages/Tasks/TaskPage";
-import NotFoundPage from "../components/NotFound/NotFoundPage";
+import NotFoundPage from "../components/pages/NotFound/NotFoundPage";
 import HomePage from "../components/pages/Home/HomePage";
 import AboutPage from "../components/pages/About/AboutPage";
 import LoginPage from "../components/pages/Login/LoginPage";
