@@ -1,0 +1,12 @@
+.nav-link{
+    color: white !important;
+    padding: 0rem 1rem 0.3rem !important;
+  
+  }
+  .dropdown-toggle {
+    white-space: nowrap;
+    padding: 0rem 2rem !important;
+  }
+.text-black{
+    color: black;
+}

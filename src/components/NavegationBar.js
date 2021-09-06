@@ -1,31 +1,54 @@
-import React from 'react';
-import {Navbar,Button,Nav,NavDropdown,FormControl,Form} from 'react-bootstrap'
+import { React } from "react";
+import { Navbar, Nav, NavDropdown } from "react-bootstrap";
+import "../styles/NavegationBar.css";
+import { Link, NavLink } from "react-router-dom";
 const NavegationBar = () => {
-    return (
-        <Navbar bg="dark" expand="lg"  className="d-flex ">
-        <Navbar.Brand href="#" className="mx-4">Navbar scroll</Navbar.Brand>
-        <Navbar.Toggle aria-controls="navbarScroll" />
-        <Navbar.Collapse id="navbarScroll">
-          <Nav
-            className="mx-4 my-2 my-lg-0 "
-            style={{ maxHeight: '100px' }}
-            navbarScroll
-          >
-            <Nav.Link href="#action1" className="text-white">Home</Nav.Link>
-            <Nav.Link href="#action2" className="text-white">Link</Nav.Link>
-            <NavDropdown title="Link" id="navbarScrollingDropdown" className="text-white">
-              <NavDropdown.Item href="#action3" >Action</NavDropdown.Item>
-              <NavDropdown.Item href="#action4" >Another action</NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item href="#action5" className="text-white">Something else here</NavDropdown.Item>
-            </NavDropdown>
-            <Nav.Link href="#" disabled className="text-white">
-              Link
-            </Nav.Link>
-          </Nav>
-        </Navbar.Collapse>
-      </Navbar>
-    );
-}
+  return (
+    <Navbar bg="dark" expand="lg" className="d-flex ">
+      <Navbar.Brand className="mx-4 text-white">
+        <Link to="/" className="mx-4 text-white navbar-brand">
+          Logo
+        </Link>
+      </Navbar.Brand>
+      <Navbar.Toggle aria-controls="navbarScroll" />
+      <Navbar.Collapse id="navbarScroll">
+        <Nav
+          className="mx-4 my-2 my-lg-0 "
+          style={{ maxHeight: "100px" }}
+          navbarScroll
+        >
+          <Nav.Link href="/" className="text-white">
+            <Link to="/" className="text-white nav-link">
+              Home
+            </Link>
+          </Nav.Link>
+          <Nav.Link href="/about" className="text-white">
+            <Link to="/about" className="text-white nav-link">
+              about
+            </Link>
+          </Nav.Link>
+          <NavDropdown title="User" id="navbarScrollingDropdown">
+            <NavDropdown.Item href="/login">
+              <Link to="/login" className=" nav-link text-black">
+                Login
+              </Link>
+            </NavDropdown.Item>
+            <NavDropdown.Item href="/register">
+              <Link to="/register" className=" nav-link text-black">
+                Register
+              </Link>
+            </NavDropdown.Item>
+            <NavDropdown.Divider />
+            <NavDropdown.Item href="/tasks">
+              <Link to="/tasks" className=" nav-link text-black">
+                Tasks
+              </Link>
+            </NavDropdown.Item>
+          </NavDropdown>
+        </Nav>
+      </Navbar.Collapse>
+    </Navbar>
+  );
+};
 
 export default NavegationBar;
