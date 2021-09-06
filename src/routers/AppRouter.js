@@ -8,6 +8,7 @@ import HomePage from "../components/pages/Home/HomePage";
 import AboutPage from "../components/pages/About/AboutPage";
 import LoginPage from "../components/pages/Login/LoginPage";
 import RegisterPage from "../components/pages/Register/RegisterPage";
+import Footer from "../components/Footer";
 const AppRouter = () => {
     return (
         <Router>
@@ -30,6 +31,7 @@ const AppRouter = () => {
 
 
             </Switch>
+        <Footer></Footer>
         </Router>
     );
 }

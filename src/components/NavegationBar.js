@@ -4,21 +4,22 @@ import "../styles/NavegationBar.css";
 import { Link } from "react-router-dom";
 const NavegationBar = () => {
   return (
-    <Navbar bg="dark" expand="lg" className="d-flex ">
+    <Navbar expand="lg" className="d-flex background">
       <Navbar.Brand className="mx-4 text-white">
         <Link to="/" className="mx-4 text-white navbar-brand">
           Logo
         </Link>
       </Navbar.Brand>
-      <Navbar.Toggle aria-controls="navbarScroll" />
-      <Navbar.Collapse id="navbarScroll">
+      <Navbar.Toggle aria-controls="navbarScroll"  className="text-white"/>
+      <Navbar.Collapse id="navbarScroll" >
         <Nav
           className="mx-4 my-2 my-lg-0 "
-          style={{ maxHeight: "100px" }}
+          style={{ maxHeight: "100px",
+                  }}
           navbarScroll
         >
-          <Nav.Link href="/" className="text-white">
-            <Link to="/" className="text-white nav-link">
+          <Nav.Link href="/" className="text-white ">
+            <Link to="/" className="text-white nav-link ">
               Home
             </Link>
           </Nav.Link>
@@ -27,20 +28,20 @@ const NavegationBar = () => {
               about
             </Link>
           </Nav.Link>
-          <NavDropdown title="User" id="navbarScrollingDropdown">
-            <NavDropdown.Item href="/login">
+          <NavDropdown title="User" id="navbarScrollingDropdown" className="background">
+            <NavDropdown.Item href="/login" >
               <Link to="/login" className=" nav-link text-black">
                 Login
               </Link>
             </NavDropdown.Item>
-            <NavDropdown.Item href="/register">
+            <NavDropdown.Item href="/register" >
               <Link to="/register" className=" nav-link text-black">
                 Register
               </Link>
             </NavDropdown.Item>
             <NavDropdown.Divider />
             <NavDropdown.Item href="/tasks">
-              <Link to="/tasks" className=" nav-link text-black">
+              <Link to="/tasks" className=" nav-link text-black ">
                 Tasks
               </Link>
             </NavDropdown.Item>
