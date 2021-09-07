@@ -8,16 +8,23 @@ export const TaskCreator = (props) => {
     setnewTaskName("");
   };
   return (
-    <div className="my-1">
+    <div className="my-2">
       <input
         type="text"
-        className="form-control"
+        className="form-control "
         value={newTaskName}
         onChange={updateNewTaskValue}
       />
-      <button className="btn btn-primary m-2" onClick={createNewTask}>
+      <div class="container">
+        <div class="col-md-12 text-center">
+        <button className="btn button-background text-white m-3 w-25" onClick={createNewTask}>
         ADD
       </button>
+        </div>
+    </div>
+     
+      
+     
     </div>
   );
 };

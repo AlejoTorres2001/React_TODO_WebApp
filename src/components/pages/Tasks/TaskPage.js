@@ -105,18 +105,19 @@ export default function TaskPage() {
     <div className="taskpage">
       <TaskBanner tasks={taskItems} userName={userName}></TaskBanner>
       <TaskCreator callback={createNewTask}></TaskCreator>
-      <table className="table table-striped table-bordered">
+      <table className="table table-striped table-bordered table-dark">
         <thead>
           <tr>
             <th>Modify</th>
             <th>Description</th>
             <th>State</th>
+            <th>Delete</th>
           </tr>
         </thead>
         <tbody>{taskTableRows(false)}</tbody>
       </table>
 
-      <div className="bg-secondary text-white p-2 text-center">
+      <div className="bg-dark text-white p-2 text-center">
         <VisibilityControl
           description="completed tasks"
           isChecked={showCompleted}
@@ -125,11 +126,15 @@ export default function TaskPage() {
       </div>
       {/* completed tasks */}
       {showCompleted && (
-        <table className="table table-striped table-bordered">
+        <table className="table table-striped table-bordered table-dark">
           <thead>
             <tr>
+
+              <th>Modify</th>
               <th>Description</th>
-              <th>done</th>
+              <th>State</th>
+              <th>Delete</th>
+              
             </tr>
           </thead>
           <tbody>{taskTableRows(true)}</tbody>

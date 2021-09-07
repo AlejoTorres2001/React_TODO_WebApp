@@ -1,0 +1,16 @@
+.banner-background{
+    background-color: #4158D0;
+}
+.button-background{
+    background: #4158D0!important;
+}
+
+.input {
+    outline: 0;
+    border-width: 0 0 2px;
+    border-color: #494a4b !important;
+    background: #494a4b !important;
+    font-size:large !important;
+    color:#f6f6f6 !important;
+  }
+  
