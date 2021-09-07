@@ -1,16 +1,28 @@
 import {React,useState} from 'react'
 import { Form, FormLabel, InputGroup } from 'react-bootstrap'
+import { useHistory } from 'react-router';
 
 export default function RegisterPage() {
     const [newUserName, setnewUserName] = useState("");
     const [newUserPassword, setnewUserPassword] = useState("");
     const updateNewUserName = (e) => setnewUserName(e.target.value);
     const updateNewUserPassword = (e) => setnewUserPassword(e.target.value);
-
+    const history = useHistory()
     const HandleRegister = () =>{
-        //TODO  VALIDATE CREDENTIAL  STORE THEM  
-  
-            
+        //TODO  VALIDATE CREDENTIAL 
+        var Users= JSON.parse(localStorage.getItem("users")) 
+        console.log({username:newUserName,password:newUserPassword})
+        console.log(Users)
+
+        if(!(Users instanceof Array)) Users = [Users]; 
+        Users.push({username:newUserName,password:newUserPassword}); 
+        Users = Users.filter(Boolean)
+        localStorage.setItem("users", JSON.stringify(Users));
+
+        setnewUserName("")
+        setnewUserPassword("")
+        
+        history.push("/login")
     }
     return (
         <div>
@@ -33,3 +45,4 @@ export default function RegisterPage() {
         </div>
     )
 }
+

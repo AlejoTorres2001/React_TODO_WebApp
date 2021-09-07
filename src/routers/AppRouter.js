@@ -9,6 +9,7 @@ import AboutPage from "../components/pages/About/AboutPage";
 import LoginPage from "../components/pages/Login/LoginPage";
 import RegisterPage from "../components/pages/Register/RegisterPage";
 import Footer from "../components/Footer";
+import PrivateRoute from "./PrivateRoute";
 const AppRouter = () => {
     return (
         <Router>
@@ -23,7 +24,7 @@ const AppRouter = () => {
             <Route exact path="/login" component={LoginPage}/>
                 
             <Route exact path="/register" component={RegisterPage}/>
-            <Route exact path="/tasks" component={TaskPage}/>
+            <PrivateRoute exact path="/tasks" component={TaskPage}/>
             <Route path="/404" component={NotFoundPage} />
         <Route path="*" > <Redirect to="/404"></Redirect> </Route>
 
