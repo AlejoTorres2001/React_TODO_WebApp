@@ -3,9 +3,11 @@ import { TaskRow } from "./TaskRow";
 import { TaskBanner } from "./TaskBanner";
 import { TaskCreator } from "./TaskCreator";
 import { VisibilityControl } from "./VisibilityControl";
-import '../../../styles/index.css'
+import '../../../styles/index.css';
+import useAuth from "../../auth/useAuth";
 export default function TaskPage() {
     //USE STATES
+  const auth = useAuth() 
   const [userName, setuserName] = useState("Alejo");
   const [taskItems, settaskItems] = useState([]);
   const [showCompleted, setshowCompleted] = useState(true);
@@ -46,7 +48,7 @@ export default function TaskPage() {
     if (!taskItems.find((t) => t.name === taskName)) {
       settaskItems([
         ...taskItems,
-        { id: lastTaskID() + 1, name: taskName, done: false, selected: false },
+        { id: lastTaskID() + 1, name: taskName, done: false, selected: false,user: auth.getUserName()},
       ]);
     }
   };
@@ -87,7 +89,7 @@ export default function TaskPage() {
 
   const taskTableRows = (done) => //done param makes it reusable
     taskItems
-      .filter((task) => task.done === done)
+      .filter((task) => task.done === done && task.user === auth.getUserName())
       .map((task) => (
         <TaskRow
           task={task}

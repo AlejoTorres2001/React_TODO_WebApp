@@ -37,6 +37,9 @@ const AuthProvider = ({children}) =>{
        },
        islogged(){
             return !! user;
+        },
+        getUserName(){
+            return user.username
         }
     }
 
