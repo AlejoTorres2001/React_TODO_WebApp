@@ -2,7 +2,15 @@ import { React } from "react";
 import { Navbar, Nav, NavDropdown } from "react-bootstrap";
 import "../styles/NavegationBar.css";
 import { Link } from "react-router-dom";
+import useAuth from '../components/auth/useAuth';
 const NavegationBar = () => {
+  const auth = useAuth(); 
+
+  const handleLogout= () => {
+    auth.logout()
+
+
+  }
   return (
     <Navbar expand="lg" className="d-flex background">
       <Navbar.Brand className="mx-4 text-white">
@@ -37,6 +45,11 @@ const NavegationBar = () => {
             <NavDropdown.Item href="/register" >
               <Link to="/register" className=" nav-link text-black">
                 Register
+              </Link>
+            </NavDropdown.Item>
+            <NavDropdown.Item href="/login" >
+              <Link to="/login" className=" nav-link text-black" onClick={handleLogout}>
+                Log-out
               </Link>
             </NavDropdown.Item>
             <NavDropdown.Divider />

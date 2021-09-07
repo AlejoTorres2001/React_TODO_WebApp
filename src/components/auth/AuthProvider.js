@@ -1,5 +1,6 @@
 import { createContext,useState,useEffect,useContext } from "react";
 export const AuthContext = createContext();
+export const UsersContext = createContext();
 
 const AuthProvider = ({children}) =>{
     const [user, setUser] = useState(
@@ -16,15 +17,29 @@ const AuthProvider = ({children}) =>{
     },[user])
     const contextValue={
         user,
-        login(){setUser({id:1,username:"luis50"})} //en realidad este seria el ultimo paso,caso real consumir api => consultar => validar 
+        login(user,password){setUser({username:user,password:password})} //en realidad este seria el ultimo paso,caso real consumir api => consultar => validar 
         ,
         logout(){
             setUser(null);
-        },
-        islogged(){
+        }, 
+        getUsers(){
+            var Users= JSON.parse(localStorage.getItem("users")) 
+            if(!(Users instanceof Array)) Users = [Users]; 
+            return Users
+       },
+       setUsers(newName,newPass){
+           
+        var Users = this.getUsers()
+        Users.push({username:newName,password:newPass}); 
+        Users = Users.filter(Boolean)
+        localStorage.setItem("users", JSON.stringify(Users));
+
+       },
+       islogged(){
             return !! user;
         }
     }
+
 
     return <AuthContext.Provider value={contextValue}>
         {children}
