@@ -1,7 +1,6 @@
 import { React, useState } from "react";
 import { useHistory, useLocation } from "react-router-dom";
 import useAuth from "../../auth/useAuth";
-
 const LoginPage = () => {
   const auth = useAuth();
   const history = useHistory();
@@ -31,7 +30,7 @@ const LoginPage = () => {
         </div>
       )}
 
-      <div class="col-md-4 mx-auto">
+      <div class="col-md-4 mx-auto ">
         <div class="card mt-4 text-center carta">
           <div class="card-header  carta-header">
             <h1>Login</h1>
@@ -71,7 +70,11 @@ const LoginPage = () => {
             </form>
           </div>
         </div>
+        <div>
+        </div>
       </div>
+
+      
     </div>
   );
 };
