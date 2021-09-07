@@ -1,6 +1,7 @@
 import { React, useState } from "react";
 import { useHistory, useLocation } from "react-router-dom";
 import useAuth from "../../auth/useAuth";
+import '../../../styles/LoginPage.css'
 const LoginPage = () => {
   const auth = useAuth();
   const history = useHistory();
@@ -31,15 +32,15 @@ const LoginPage = () => {
       )}
 
       <div class="col-md-4 mx-auto ">
-        <div class="card mt-4 text-center carta">
+        <div class="card mt-4 text-center carta background">
           <div class="card-header  carta-header">
-            <h1>Login</h1>
+            <h1 class="text-white">Login</h1>
           </div>
           <div class="card-body">
             <form>
               <div class="mt-3">
                 <input
-                  class="input form-control"
+                  class="input form-control input-background "
                   type="text"
                   name="code"
                   placeholder="username"
@@ -49,7 +50,7 @@ const LoginPage = () => {
               </div>
               <div class="mt-3">
                 <input
-                  class="input form-control"
+                  class="input form-control input-background"
                   type="password"
                   name="code"
                   placeholder="***"
@@ -59,7 +60,7 @@ const LoginPage = () => {
               </div>
               <div class="mt-3">
                 <button
-                  class=" btn btn-primary tamaño"
+                  class=" btn btn-primary w-100"
                   type="button"
                   id="submit"
                   onClick={handleLogin}
