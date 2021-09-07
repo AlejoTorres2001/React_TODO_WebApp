@@ -8,7 +8,7 @@ import useAuth from "../../auth/useAuth";
 export default function TaskPage() {
     //USE STATES
   const auth = useAuth() 
-  const [userName, setuserName] = useState("Alejo");
+  const [userName, setuserName] = useState(auth.getUserName());
   const [taskItems, settaskItems] = useState([]);
   const [showCompleted, setshowCompleted] = useState(true);
 
@@ -21,10 +21,10 @@ export default function TaskPage() {
       settaskItems(JSON.parse(data));
     }
     else {
-      setuserName("Alejo");
+      setuserName(auth.getUserName());
       setshowCompleted(true);
       settaskItems([
-        { id: 0, name: "Example Task", done: false, selected: false },
+        { id: 0, name: "Example Task", done: false, selected: false,user:auth.getuserName() },
       ]);
     }
   }, []);
