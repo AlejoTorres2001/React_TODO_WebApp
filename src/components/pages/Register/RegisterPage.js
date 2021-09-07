@@ -44,7 +44,7 @@ export default function RegisterPage() {
             <form>
               <div class="mt-3">
                 <input
-                  class="input form-control input-background "
+                  class=" form-control input-background "
                   type="text"
                   name="code"
                   placeholder="username"
@@ -54,7 +54,7 @@ export default function RegisterPage() {
               </div>
               <div class="mt-3">
                 <input
-                  class="input form-control input-background"
+                  class=" form-control input-background"
                   type="password"
                   name="code"
                   placeholder="***"
