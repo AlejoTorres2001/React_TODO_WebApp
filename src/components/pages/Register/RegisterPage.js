@@ -1,22 +1,40 @@
 import {React,useState} from 'react'
-import { Form, FormLabel, InputGroup } from 'react-bootstrap'
+
 import { useHistory } from 'react-router';
 import useAuth from '../../auth/useAuth';
 export default function RegisterPage() {
     const auth = useAuth()
     const [newUserName, setnewUserName] = useState("");
     const [newUserPassword, setnewUserPassword] = useState("");
+    const [Failed, setFailed] = useState(false)
     const updateNewUserName = (e) => setnewUserName(e.target.value);
     const updateNewUserPassword = (e) => setnewUserPassword(e.target.value);
     const history = useHistory()
-    const HandleRegister = () =>{
+    var band = false
+    const HandleRegister = async  () =>{
+        var Users = auth.getUsers()
+        Users.forEach(({username}) => {
+            if( username === newUserName){
+                band=true
+
+            }
+        })
+    if(band){
+        setFailed(true)
+    }
+    else{
         auth.setUsers(newUserName,newUserPassword)
         setnewUserName("")
         setnewUserPassword("")
         history.push("/login")
+    } 
     }
+    
     return (
         <div>
+               {Failed && <div class="alert alert-danger" role="alert">
+                    This username already exist!
+                        </div>}
              <h1>Register</h1>
              <form className="form-control">
                  <label for="username" className="form-check-label" >Usuario</label>

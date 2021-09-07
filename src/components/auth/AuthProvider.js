@@ -23,12 +23,12 @@ const AuthProvider = ({children}) =>{
             setUser(null);
         }, 
         getUsers(){
-            var Users= JSON.parse(localStorage.getItem("users")) 
+            var Users= JSON.parse(localStorage.getItem("users")) || [] 
             if(!(Users instanceof Array)) Users = [Users]; 
             return Users
        },
        setUsers(newName,newPass){
-           
+
         var Users = this.getUsers()
         Users.push({username:newName,password:newPass}); 
         Users = Users.filter(Boolean)
