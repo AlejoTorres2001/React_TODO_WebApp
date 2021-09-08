@@ -10,25 +10,25 @@ export default function AboutPage() {
       <div className="container text-center w-75 text-white">
         <ol class=" list-group my-2 text-white">
           <Link to="/login" className="text-decoration-none">
-            <li class=" list-group-item my-1 list-unstyled text-white bg">
+            <li class=" list-group-item my-2 list-unstyled text-white bg">
               <p className="text fs-4">
-                Register your account here !
+                Register your account here
                 <i class="bi bi-box-arrow-in-right fs-2"></i>
               </p>
             </li>
           </Link>
           <Link to="/login" className="text-decoration-none">
-            <li class="list-group-item my-1 list-unstyled text-white bg">
+            <li class="list-group-item my-2 list-unstyled text-white bg">
              
-              <p className="text fs-4">Login with your new account </p>
+              <p className="text fs-4">Login with your new user</p>
               <i class="bi bi-person-circle fs-2"></i>
             </li>
           </Link>
 
           <Link to="/" className=" text-decoration-none">
-            <li class="list-group-item my-1 list-unstyled text-white bg">
+            <li class="list-group-item my-2 list-unstyled text-white bg">
               <p className="text fs-4">
-                Manage all your daily tasks here
+                Manage all your daily tasks
                 <i class="bi bi-list-task fs-1"></i>
               </p>
             </li>
