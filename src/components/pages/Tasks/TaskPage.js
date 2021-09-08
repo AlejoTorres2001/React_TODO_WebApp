@@ -103,7 +103,7 @@ export default function TaskPage() {
       ));
 
   return (
-    <div className="taskpage">
+    <div className="taskpage ms-1 me-1">
       <TaskBanner tasks={taskItems} userName={userName}></TaskBanner>
       <TaskCreator callback={createNewTask}></TaskCreator>
       <table className="table table-striped table-bordered table-dark">

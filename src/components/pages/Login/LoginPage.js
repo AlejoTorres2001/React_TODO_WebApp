@@ -33,7 +33,7 @@ const LoginPage = () => {
         </div>
       )}
 
-      <div class="col-md-4 mx-auto ">
+       <div class="  col-md-4  mx-auto ms-2 me-2"> {/*TODO implement mq to appy only when screen size is Mobile L ms-2 me-2 */}
         <div class="card mt-4 text-center carta background">
           <div class="card-header  carta-header">
             <h1 class="text-white">Login</h1>
