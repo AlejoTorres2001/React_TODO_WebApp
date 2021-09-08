@@ -37,21 +37,26 @@ const NavegationBar = () => {
             </Link>
           </Nav.Link>
           <NavDropdown title="User" id="navbarScrollingDropdown" className="background">
-            <NavDropdown.Item href="/login" >
+            {!auth.islogged() &&
+              <NavDropdown.Item href="/login" >
               <Link to="/login" className=" nav-link text-black">
                 Login
               </Link>
             </NavDropdown.Item>
+            
+            }
             <NavDropdown.Item href="/register" >
               <Link to="/register" className=" nav-link text-black">
                 Register
               </Link>
             </NavDropdown.Item>
-            <NavDropdown.Item href="/login" >
+            {auth.islogged() &&
+              <NavDropdown.Item href="/login" >
               <Link to="/login" className=" nav-link text-black" onClick={handleLogout}>
                 Log-out
               </Link>
             </NavDropdown.Item>
+            }
             <NavDropdown.Divider />
             <NavDropdown.Item href="/tasks">
               <Link to="/tasks" className=" nav-link text-black ">
