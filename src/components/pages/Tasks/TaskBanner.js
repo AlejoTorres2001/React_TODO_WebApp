@@ -5,7 +5,7 @@ export const TaskBanner = (props) => {
   
   return (
   
-        <h4 className="banner-background text-primary text-white text-center p-4">
+        <h4 className="banner-background text-primary text-white text-center p-4 mt-1">
       {props.userName}'s Task App ({taskLeft} task to do)
     </h4>
 

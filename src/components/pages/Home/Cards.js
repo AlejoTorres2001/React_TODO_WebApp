@@ -1,23 +1,23 @@
 import React from "react";
 import Card from "./Card";
-import img1 from "../../../logo.svg";
-import img2 from "../../../logo.svg";
-import img3 from "../../../logo.svg";
+import img1 from "../../../image1.jpg";
+import img2 from "../../../image2.jpg";
+
 const cards = [
   {
-    titulo: "web1",
+    titulo: "title1",
     id: 1,
     Image: img1,
-    url:'https://www.youtube.com/watch?v=1_DXtP0XyDw',
-    text: ' ea dolorum et voluptatem minus ex perspiciatis molestias veniam, quidem, iusto asperiores officia? Magni quis harum aspernatur fuga quae.'
+    url:'https://reactjs.org/',
+    text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis consequatur"
   },
 
   {
-    titulo: "web1",
+    titulo: "title2",
     id: 2,
-    Image: img1,
-    url:'https://www.youtube.com/watch?v=1_DXtP0XyDw',
-    text: 'ea dolorum et voluptatem minus ex perspiciatis molestias veniam, quidem, iusto asperiores officia? Magni quis harum aspernatur fuga quae.'
+    Image: img2,
+    url:'/',
+    text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis consequatur" 
   },
   
 
