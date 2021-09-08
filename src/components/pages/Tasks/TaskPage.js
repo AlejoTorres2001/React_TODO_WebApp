@@ -1,10 +1,10 @@
+import useAuth from "../../auth/useAuth";
 import {React,useEffect,useState} from 'react'
 import { TaskRow } from "./TaskRow";
 import { TaskBanner } from "./TaskBanner";
 import { TaskCreator } from "./TaskCreator";
 import { VisibilityControl } from "./VisibilityControl";
 import '../../../styles/index.css';
-import useAuth from "../../auth/useAuth";
 export default function TaskPage() {
     //USE STATES
   const auth = useAuth() 
@@ -27,7 +27,7 @@ export default function TaskPage() {
         { id: 0, name: "Example Task", done: false, selected: false,user:auth.getuserName() },
       ]);
     }
-  }, []);
+  }, [auth]);
 
   useEffect(() => {
     localStorage.setItem("tasks", JSON.stringify(taskItems));
