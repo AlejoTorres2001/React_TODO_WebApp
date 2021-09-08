@@ -9,7 +9,7 @@ const cards = [
     id: 1,
     Image: img1,
     url:'https://www.youtube.com/watch?v=1_DXtP0XyDw',
-    text: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Inventore ducimus omnis, ea dolorum et voluptatem minus ex perspiciatis molestias veniam, quidem, iusto asperiores officia? Magni quis harum aspernatur fuga quae.'
+    text: ' ea dolorum et voluptatem minus ex perspiciatis molestias veniam, quidem, iusto asperiores officia? Magni quis harum aspernatur fuga quae.'
   },
 
   {
@@ -17,7 +17,7 @@ const cards = [
     id: 2,
     Image: img1,
     url:'https://www.youtube.com/watch?v=1_DXtP0XyDw',
-    text: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Inventore ducimus omnis, ea dolorum et voluptatem minus ex perspiciatis molestias veniam, quidem, iusto asperiores officia? Magni quis harum aspernatur fuga quae.'
+    text: 'ea dolorum et voluptatem minus ex perspiciatis molestias veniam, quidem, iusto asperiores officia? Magni quis harum aspernatur fuga quae.'
   },
   
 

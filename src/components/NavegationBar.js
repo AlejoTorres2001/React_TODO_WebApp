@@ -14,8 +14,8 @@ const NavegationBar = () => {
   return (
     <Navbar expand="lg" className="d-flex background">
       <Navbar.Brand className="mx-4 text-white">
-        <Link to="/" className="mx-4 text-white navbar-brand">
-          Logo
+        <Link to="/" className=" navbar-brand ">
+        <i class="fab fa-react fs-1 mb-1 react"></i>
         </Link>
       </Navbar.Brand>
       <Navbar.Toggle aria-controls="navbarScroll"  className="text-white"/>
@@ -27,16 +27,16 @@ const NavegationBar = () => {
           navbarScroll
         >
           <Nav.Link href="/" className="text-white ">
-            <Link to="/" className="text-white nav-link ">
+            <Link to="/" className="text-white nav-link fs-3">
               Home
             </Link>
           </Nav.Link>
           <Nav.Link href="/about" className="text-white">
-            <Link to="/about" className="text-white nav-link">
+            <Link to="/about" className="text-white nav-link fs-3">
               about
             </Link>
           </Nav.Link>
-          <NavDropdown title="User" id="navbarScrollingDropdown" className="background">
+          <NavDropdown title="User" id="navbarScrollingDropdown" className="background fs-3">
             {!auth.islogged() &&
               <NavDropdown.Item href="/login" >
               <Link to="/login" className=" nav-link text-black">

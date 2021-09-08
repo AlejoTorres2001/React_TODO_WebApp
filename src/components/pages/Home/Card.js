@@ -10,7 +10,7 @@ const Card = ({ title, imageSource, url, text }) => {
     }
   }
   return (
-    <div className="card text-center bg-dark animate__animated animate__backInDown mt-1 mb-5 mx-4 ">
+    <div className="card text-center bg-dark animate__animated animate__backInDown mt-1 mb-5 mx-3 ">
       <div className="overflow ">
         <img src={imageSource} alt="" className="card-img-top" />
       </div>
