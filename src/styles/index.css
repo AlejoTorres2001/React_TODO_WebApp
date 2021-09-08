@@ -9,6 +9,7 @@ body {
   height: 100%;
   background-color: #202731 !important;
   margin: 0;
+  overflow-y:scroll;
 
 }
 
@@ -18,5 +19,5 @@ code {
     monospace;
 }
 .taskapp{
-  overflow-y:scroll;
+  
 }
