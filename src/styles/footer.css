@@ -14,8 +14,8 @@
   justify-content: center;
   align-items: center;
   outline: none;
-  width: 70px;
-  height: 70px;
+  width: 40px;
+  height: 40px;
   text-decoration: none;
 }
 .icon__inner {
@@ -23,8 +23,8 @@
   align-items: center;
   justify-content: center;
   flex-direction: row;
-  width: 68px;
-  height: 68px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   background: #f6f6f6;
   text-align: center;
@@ -32,7 +32,7 @@
 .social-icon i {
   position: relative;
   transition: 0.3s;
-  font-size: 30px;
+  font-size: 20px;
   z-index: 1;
 }
 .social-icon::after {
@@ -89,7 +89,7 @@
   top: auto;
   bottom: 0;
   width: 100%;
-  height: 15%;
+  height: 10%;
   display: inline-block;
   text-align: center;
 }
