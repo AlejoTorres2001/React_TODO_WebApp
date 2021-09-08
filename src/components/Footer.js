@@ -1,35 +1,40 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faFacebook,faTwitter,faGoogle,faGithub } from "@fortawesome/free-brands-svg-icons";
-
 import React from 'react'
 import '../styles/footer.css'
 export default function Footer() {
     return (
-        <div className="footer">
-             <h2 className="text-primary text-white text-center p-2">Follow me on My Social Medias</h2>
+       <div className="footer">
+       <h2 class="title text-white">Follow me on My Social Medias</h2>
+ <div class="social-icons">
+     <a href="" class="social-icon facebook">
+         <span class="icon__inner">
+             <i class="fab fa-facebook-f">
 
-        <div className="social-icons">
-     <a href="" className="social-icon facebook">
-         <span className="icon__inner">
-             <FontAwesomeIcon icon={faFacebook} className="facebook"/>
+             </i>
          </span>
      </a>
-     <a href="" className="social-icon twitter">
-         <span className="icon__inner">
-         <FontAwesomeIcon icon={faTwitter} className="twitter"/>
+     <a href="" class="social-icon twitter">
+         <span class="icon__inner">
+             <i class="fab fa-twitter">
+
+             </i>
          </span>
      </a>
-     <a href="" className="social-icon github">
-         <span className="icon__inner">
-         <FontAwesomeIcon icon={faGithub} className="github"/>
+     <a href="" class="social-icon github">
+         <span class="icon__inner">
+             <i class="fab fa-github">
+
+             </i>
          </span>
      </a>
-     <a href="" className="social-icon gmail">
-         <span className="icon__inner">
-         <FontAwesomeIcon icon={faGoogle} className="gmail"/>
+     <a href="" class="social-icon gmail">
+         <span class="icon__inner">
+             <i class="fas fa-envelope">
+
+             </i>
          </span>
      </a>
  </div>
-        </div>
+       
+       </div>
     )
 }

@@ -13,10 +13,14 @@ export const TaskModifier = (props) => {
           type="text"
           value={modifiedTaskName}
           onChange={updateTaskValue}
+          className="input w-75"
         />
-        <button className="btn btn-success mx-2" onClick={modifyTask}>
+
+        <button className="btn button-background text-white mx-1 my-1 w-20" onClick={modifyTask}>
           Modify
         </button>
+
+        
       </div>
     )
   );
