@@ -80,6 +80,7 @@ export default function TaskPage() {
         const t = tasks[index];
         if (t.name === task.name) {
           t.name = newname;
+          t.selected = false;
         }
       }
       return tasks;

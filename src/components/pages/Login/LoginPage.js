@@ -26,8 +26,10 @@ const LoginPage = () => {
   return (
     <div>
       {Failed && (
-        <div class="alert alert-danger" role="alert">
-          Wrong Username or password!
+        <div class="alert alert-danger m-1" role="alert">
+          <h4 className="text-center fs-5">
+            Wrong Username or password!
+            </h4> 
         </div>
       )}
 
@@ -58,7 +60,7 @@ const LoginPage = () => {
                   onChange={updateUserPassword}
                 />
               </div>
-              <div class="mt-3">
+              <div class="mt-3 mx-1">
                 <button
                   class=" btn btn-primary w-100"
                   type="button"

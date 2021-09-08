@@ -31,8 +31,8 @@ export default function RegisterPage() {
   return (
     <>
       {Failed && (
-        <div class="alert alert-danger" role="alert">
-          This username already exist!
+        <div class="alert alert-danger m-1" role="alert">
+          <h4 className=" text-center fs-5">This username already exist!</h4>
         </div>
       )}
       <div class="col-md-4 mx-auto ">
@@ -62,7 +62,7 @@ export default function RegisterPage() {
                   onChange={updateNewUserPassword}
                 />
               </div>
-              <div class="mt-3">
+              <div class="mt-3 mx-1">
                 <button
                   class=" btn btn-primary w-100"
                   type="button"
