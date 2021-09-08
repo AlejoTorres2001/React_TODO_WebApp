@@ -9,7 +9,7 @@ export default function AboutPage() {
       </div>
       <div className="container text-center w-75 text-white">
         <ol class=" list-group my-2 text-white">
-          <Link to="/login" className="text-decoration-none">
+          <Link to="/register" className="text-decoration-none">
             <li class=" list-group-item my-2 list-unstyled text-white bg">
               <p className="text fs-4">
                 Register your account here
