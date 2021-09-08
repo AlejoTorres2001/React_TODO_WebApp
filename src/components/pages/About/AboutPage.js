@@ -13,6 +13,7 @@ export default function AboutPage() {
             <li class=" list-group-item my-2 list-unstyled text-white bg">
               <p className="text fs-4">
                 Register your account here
+                <br />
                 <i class="bi bi-box-arrow-in-right fs-2"></i>
               </p>
             </li>
@@ -29,6 +30,7 @@ export default function AboutPage() {
             <li class="list-group-item my-2 list-unstyled text-white bg">
               <p className="text fs-4">
                 Manage all your daily tasks
+                <br />
                 <i class="bi bi-list-task fs-1"></i>
               </p>
             </li>
