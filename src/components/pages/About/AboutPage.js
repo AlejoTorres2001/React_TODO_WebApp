@@ -6,10 +6,9 @@ export default function AboutPage() {
     <>
       <div className="container text-center my-1 w-100 text-white">
         <h1 className="fs-1 text-white font">How does it works ?</h1>
-        <h6 class=" text-white font">It´s very simple :)</h6>
       </div>
-      <div className="container text-center my-1 w-50 text-white">
-        <ol class=" list-group my-4 text-white">
+      <div className="container text-center w-50 text-white">
+        <ol class=" list-group my-2 text-white">
           <Link to="/login" className="text-decoration-none">
             <li class=" list-group-item list-group my-1 list-unstyled text-white bg">
               <p className="text fs-4">

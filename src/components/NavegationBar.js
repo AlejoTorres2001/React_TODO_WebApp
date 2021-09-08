@@ -12,7 +12,7 @@ const NavegationBar = () => {
 
   }
   return (
-    <Navbar expand="lg" className="d-flex background">
+    <Navbar expand="lg" className="d-flex background ">
       <Navbar.Brand className="mx-4 text-white">
         <Link to="/" className=" navbar-brand ">
         <i class="fab fa-react fs-1 mb-1 react"></i>
