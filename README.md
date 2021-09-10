@@ -34,3 +34,6 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 **Take a look to a full working demo in its current state here:**
 
 https://my-react-todo-web-app.herokuapp.com/
+
+
+https://api.badgr.io/public/assertions/9LCsS9AVSiaZOtCu-yNf9w?identity__email=torres.alejo2001%40gmail.com
