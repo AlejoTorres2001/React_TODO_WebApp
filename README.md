@@ -36,4 +36,6 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 https://my-react-todo-web-app.herokuapp.com/
 
 **DataStax Workshop Badge**
+
+
 https://api.badgr.io/public/assertions/9LCsS9AVSiaZOtCu-yNf9w?identity__email=torres.alejo2001%40gmail.com
